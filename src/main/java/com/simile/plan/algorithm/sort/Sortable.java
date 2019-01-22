@@ -5,7 +5,11 @@ package com.simile.plan.algorithm.sort;
  * Created by yitao on 2019/1/10.
  */
 public interface Sortable {
+    int SORT_DIRECTION_ASC = 0;
+    int SORT_DIRECTION_DESC = 1;
 
-    int[] sort(int[] array);
+    int[] sortDesc(int[] array);
+
+    int[] sortAsc(int[] array);
 
 }

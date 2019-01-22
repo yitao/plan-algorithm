@@ -47,15 +47,32 @@ public class SortTeacher {
     }
 
     /**
-     * 检查数组是否是有序的
+     * 检查数组是否是降序的
      *
      * @param array 数组
      * @return false 数组是无序的
      * true 数组是有序的
      */
-    public static boolean check(int[] array) {
+    public static boolean checkDesc(int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (i != 0 && array[i] > array[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    /**
+     * 检查数组是否是升序的
+     *
+     * @param array 数组
+     * @return false 数组是无序的
+     * true 数组是有序的
+     */
+    public static boolean checkAsc(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (i != 0 && array[i] < array[i - 1]) {
                 return false;
             }
         }
