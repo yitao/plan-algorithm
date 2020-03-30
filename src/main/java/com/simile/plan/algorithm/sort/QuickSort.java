@@ -6,11 +6,13 @@ package com.simile.plan.algorithm.sort;
  */
 public class QuickSort implements Sortable {
 
+    @Override
     public int[] sortDesc(int[] array) {
         quickSort(array, 0, array.length - 1, SORT_DIRECTION_DESC);
         return array;
     }
 
+    @Override
     public int[] sortAsc(int[] array) {
         quickSort(array, 0, array.length - 1, SORT_DIRECTION_ASC);
         return array;

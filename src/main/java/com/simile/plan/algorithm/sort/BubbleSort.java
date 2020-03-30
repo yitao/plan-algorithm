@@ -1,5 +1,7 @@
 package com.simile.plan.algorithm.sort;
 
+import java.util.logging.Logger;
+
 /**
  * 冒泡排序
  * 先将第一个位置的数和它后面的数据进行对比，比较完第一轮，确定了第一个位置的数
@@ -8,7 +10,9 @@ package com.simile.plan.algorithm.sort;
  * Created by yitao on 2019/1/10.
  */
 public class BubbleSort implements Sortable {
+    private static final Logger logger = Logger.getLogger(BubbleSort.class.getName());
 
+    @Override
     public int[] sortDesc(int[] array) {
         int count = 0;
         int total = 0;
@@ -24,10 +28,11 @@ public class BubbleSort implements Sortable {
                 total++;
             }
         }
-        System.out.println("有效比较次数/总比较次数/数组大小=" + count + "/" + total + "/" + array.length);
+        logger.info("有效比较次数/总比较次数/数组大小=" + count + "/" + total + "/" + array.length);
         return array;
     }
 
+    @Override
     public int[] sortAsc(int[] array) {
         int count = 0;
         int total = 0;
@@ -43,7 +48,7 @@ public class BubbleSort implements Sortable {
                 total++;
             }
         }
-        System.out.println("有效比较次数/总比较次数/数组大小=" + count + "/" + total + "/" + array.length);
+        logger.info("有效比较次数/总比较次数/数组大小=" + count + "/" + total + "/" + array.length);
         return array;
     }
 
